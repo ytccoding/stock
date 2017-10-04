@@ -102,7 +102,7 @@ finally:
 here = os.getcwd()
 callfile = ["60","20","10","5","60S","20S","10S","5S"]#呼叫檔案
 def webstart(i):#啟動截圖
-    os.system(here + "/" + "stock3_0927_5_" + str(i) + ".py")
+    os.system(here + "/" + "stock3_0927_6_" + str(i) + ".py")
     
 for i in callfile:
     _thread.start_new_thread(webstart,(i,))

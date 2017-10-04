@@ -5,8 +5,8 @@ from time import sleep
 import os
 import time
 
-file_data = "5多"
-file_name = "_五日線多"
+file_data = "60空"
+file_name = "_季線空"
 stocktoday = time.strftime("%y_%m_%d")
 today = time.strftime("%y_%m_%d_%H_%M_%S")
 
