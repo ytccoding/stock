@@ -90,7 +90,7 @@ try:
 except:
     print("NG" + str(j))
 finally:
-    saveuse('stock_5多_data.txt',stock_5_all)#存檔專用
+    saveuse('stock_5多_data.txt',stock_5_all)
     saveuse('stock_10多_data.txt',stock_10_all)
     saveuse('stock_20多_data.txt',stock_20_all)
     saveuse('stock_60多_data.txt',stock_60_all)
@@ -100,16 +100,9 @@ finally:
     saveuse('stock_60空_data.txt',stock_60_allS)
 
 here = os.getcwd()
-callfile = ["60","20","10","5","60S","20S","10S","5S"]#檔案名稱
-def webstart(i):#啟動法人買賣超截圖
+callfile = ["60","20","10","5","60S","20S","10S","5S"]#呼叫檔案
+def webstart(i):#啟動截圖
     os.system(here + "/" + "stock3_0927_5_" + str(i) + ".py")
     
 for i in callfile:
     _thread.start_new_thread(webstart,(i,))
-
-callvolumefile = ["60","60S"]#檔案名稱
-def webstartvolume(l):#啟動股票期貨成交量截圖
-    os.system(here + "/" + "stock3_0927_5_" + str(l) + "_" + "volume" + ".py")
-
-for l in callvolumefile:
-    _thread.start_new_thread(webstartvolume,(l,))
